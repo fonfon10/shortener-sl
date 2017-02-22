@@ -53,7 +53,7 @@ class Shortener::ShortenedUrl < ActiveRecord::Base
   # return shortened url on success, nil on failure
   def self.generate(destination_url, engineer, owner: nil, custom_key: nil, expires_at: nil, fresh: false)
     begin
-      generate!(destination_url, owner: owner, custom_key: custom_key, expires_at: expires_at, fresh: fresh)
+      generate!(destination_url, engineer, owner: owner, custom_key: custom_key, expires_at: expires_at, fresh: fresh)
     rescue => e
       logger.info e
       nil
