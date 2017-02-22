@@ -34,7 +34,7 @@ class Shortener::ShortenedUrl < ActiveRecord::Base
                             owner:      owner,
                             custom_key: custom_key,
                             expires_at: expires_at,
-                            fresh:      fresh
+                            fresh:      fresh,
                             engineer: engineer
                           )
       end
