@@ -6,7 +6,7 @@ class Shortener::ShortenedUrl < ActiveRecord::Base
 
   # allows the shortened link to be associated with a user
   belongs_to :owner, polymorphic: true
-  belongs_to :engineer, polymorphic: true
+  belongs_to :engineer
 
 
   # exclude records in which expiration time is set and expiration time is greater than current time
